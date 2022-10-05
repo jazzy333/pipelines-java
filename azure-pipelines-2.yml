@@ -32,3 +32,13 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'HelloDrop_$(Build.BuildId)'
     publishLocation: 'Container'
+
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'devops-organisation'
+    scannerMode: 'Other'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
