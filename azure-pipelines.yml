@@ -5,6 +5,12 @@
 
 trigger:
 - main
+#resources:
+# pipelines:
+#   - pipeline: securitylib
+#     source: security-lib-ci
+#     project: abcd
+#     trigger: true
 
 strategy:
  matrix: 
