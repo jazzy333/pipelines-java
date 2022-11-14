@@ -7,7 +7,7 @@ trigger:
 - main
 
 strategy:
- matrix:
+ matrix: 
   linux:
    imageName: "ubuntu-latest"
   mac:
